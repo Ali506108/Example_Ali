@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electronic Shop Items</title>
+</head>
+<body>
+<h1>Electronic Shop Items</h1>
+<a href="/addItemForm">Add Item</a>
+<a href="/text">Add Item</a>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Use Thymeleaf iteration to loop through the list of items -->
+    <tr th:each="item : ${items}">
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.description}"></td>
+        <td th:text="${item.price}"></td>
+    </tr>
+
+    </tbody>
+</table>
+<h4 th:each="lang : ${language}" th:text = "${lang}">
+
+</body>
+</html>
+
+
